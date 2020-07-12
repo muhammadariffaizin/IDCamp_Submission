@@ -1,0 +1,314 @@
+.theme-word {
+    --color: #2B579A;
+    --color-dark: #002050;
+    --color-darker: #001433;
+    --color-light: #EEEEEE;
+    --text: #343A40;
+    --text-dark: #FFFFFF;
+}
+
+.theme-excel {
+    --color: #217346;
+    --color-dark: #004B1C;
+    --color-darker: #003313;
+    --color-light: #EEEEEE;
+    --text: #344037;
+    --text-dark: #FFFFFF;
+}
+
+.theme-powerpoint {
+    --color: #B7472A;
+    --color-dark: #740912;
+    --color-darker: #47050b;
+    --color-light: #EEEEEE;
+    --text: #403634;
+    --text-dark: #FFFFFF;
+}
+
+.theme-onenote {
+    --color: #80397B;
+    --color-dark: #52254F;
+    --color-darker: #31142F;
+    --color-light: #EEEEEE;
+    --text: #3d3440;
+    --text-dark: #FFFFFF;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Calibri', sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+nav {
+    display: inline-block;
+    margin: 0;
+    width: 100%;
+}
+
+nav ul {
+    margin: 0;
+}
+
+nav li {
+    padding: 20px;
+    display: inline-block;
+    list-style-type: none;
+    color: var(--color);
+    cursor: pointer;
+}
+
+nav li:hover {
+    background-color: var(--color);
+    transition: 0.3s;
+}
+
+nav li:hover a {
+    color: var(--text-dark);
+    transition: 0.3s;
+}
+
+nav a {
+    color: var(--color);
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.foot {
+    margin: 0 auto;
+    width: 100%;
+    color: var(--color);
+    padding: 10px;
+    text-align: center;
+}
+
+img {
+    width: 100%;
+    max-width: 200px;
+    height: 100%;
+    max-height: 200px;
+}
+
+.card {
+    width: 90%;
+    height: 90%;
+    margin: 5%;
+    border: solid 1px var(--color);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.parent {
+    display: flex;
+}
+
+.left {
+    background-color: var(--color);
+    flex-grow: 7;
+    flex-basis: 35%;
+}
+
+.right {
+    background-color: var(--color-light);
+    flex-grow: 13;
+    flex-basis: 65%;
+}
+
+.profile {
+    width: 80%;
+    height: 80%;
+    margin: 10%;
+    border-radius: 50%;
+}
+
+.side-bar {
+    color: var(--text-dark);
+    text-align: center;
+}
+
+.side-bar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.side-bar ul li {
+    display: block;
+    margin: 0;
+    padding: 10px 10%;
+}
+
+.side-bar ul li:hover {
+    background-color: var(--color-dark);
+    color: var(--text-dark);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.side-bar ul li:hover .progressBarContainer {
+    background-color: var(--color-darker);
+    transition: 0.3s;
+}
+
+.side-bar ul li span:first-child {
+    font-size: 14pt;
+    font-weight: bold;
+    line-height: 30px;
+}
+
+.side-bar ul li span:last-child {
+    padding-bottom: 10px;
+    line-height: 20px;
+}
+
+.headline {
+    padding-top: 15%;
+    padding-bottom: 5%;
+    border-bottom: 1px solid var(--color);
+}
+
+.headline .title {
+    font-size: 27pt;
+    letter-spacing: 0.1em;
+}
+
+.caption {
+    display: block;
+    font-size: 16pt;
+    font-weight: bolder;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+.progressBar {
+    margin: 5%;
+}
+
+.progressBarContainer {
+    width: 90%;
+    margin: 5%;
+    height: 1em;
+    background: var(--color-dark);
+    overflow: hidden;
+}
+
+.progressBarValue {
+    height: 1em;
+    float: left;
+    background: var(--color-light);
+}
+
+.content-container {
+    margin: 10%;
+    color: var(--text);
+}
+
+.round {
+    border-radius: 50%;
+}
+
+svg {
+    width: 32px;
+    height: auto;
+}
+
+.twitter {
+    fill: var(--color);
+}
+
+.twitter:hover {
+    fill: #00ACEE;
+}
+
+.github {
+    fill: var(--color);
+}
+
+.github:hover {
+    fill: #211F1F;
+}
+
+.whatsapp {
+    fill: var(--color);
+}
+
+.whatsapp:hover {
+    fill: #075E54;
+}
+
+.facebook {
+    fill: var(--color);
+}
+
+.facebook:hover {
+    fill: #3B5998;
+}
+
+.instagram {
+    fill: var(--color);
+}
+
+.instagram:hover {
+    fill: url(#gradient);
+}
+
+.social-box {
+    width: 100%;
+    float: left;
+    margin: 15% auto 20%;
+    cursor: pointer;
+}
+
+.colorSwitch {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.colorBox {
+    display: flex;
+    padding: 5px;
+}
+
+.colorBox .word {
+    background-color: #2B579A;
+}
+
+.colorBox .excel {
+    background-color: #217346;
+}
+
+.colorBox .powerpoint {
+    background-color: #B7472A;
+}
+
+.colorBox .onenote {
+    background-color: #80397B;
+}
+
+.colorTheme {
+    flex-grow: 1;
+    margin: 5px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.colorTheme:hover {
+    box-shadow: 0 4px 4px 0 rgba(0,0,0,0.6);
+    transition: 0.3s;
+}
+
+@media screen and (max-width:600px) {
+    .parent {
+        flex-direction: column;
+    }
+}
