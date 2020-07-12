@@ -1,0 +1,65 @@
+#body-content .container ul > li > a[href] {
+    color: #B71C1C !important;
+}
+
+#homeSlider h2, #homeSlider h3, #homeSlider h5 {
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+}
+
+#homeSlider img {
+    filter: sepia(20%);
+    opacity: 0.5 !important;
+}
+
+#counter {
+    margin: 0;
+}
+
+#count-container {
+    margin-top: 10px;
+}
+
+.slider .indicators .indicator-item.active {
+    background-color: #B71C1C;
+}
+
+.parallax-container {
+    height: 240px;
+}
+
+.parallax img {
+    filter: blur(1);
+    opacity: 0.5 !important;
+}
+
+
+nav .brand-logo img {
+    width: 56px;
+    margin: 4px;
+}
+
+nav li a {
+    top: 0 !important;
+}
+
+.dropdown-content {
+    top: 100% !important;
+}
+
+section {
+    padding: 20px;
+}
+
+sub {
+    font-size: 0.5em;
+}
+
+/* Minimalisir overflow pada navbar */
+@media only screen and (max-width: 600px) {
+    nav .brand-logo span.app-title {
+        display: none;
+    }
+    nav .brand-logo img {
+        width: 48px;
+    }
+}

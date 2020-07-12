@@ -1,0 +1,41 @@
+{
+    "name": "Enigmatics App",
+    "short_name": "Enigmatics",
+    "description": "Aplikasi mahasiswa Teknik Informatika ITS angkatan 2019",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#FFF",
+    "theme_color": "#B71C1C",
+    "icons": [
+        {
+          "src": "img/Logo-72x72.png",
+          "sizes": "72x72",
+          "type": "image/png"
+        },
+        {
+          "src": "img/Logo-96x96.png",
+          "sizes": "96x96",
+          "type": "image/png"
+        },
+        {
+          "src": "img/Logo-144x144.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        },
+        {
+          "src": "img/Logo-256x256.png",
+          "sizes": "256x256",
+          "type": "image/png"
+        },
+        {
+          "src": "img/Logo-384x384.png",
+          "sizes": "384x384",
+          "type": "image/png"
+        },
+        {
+          "src": "img/Logo-512x512.png",
+          "sizes": "512x512",
+          "type": "image/png"
+        }
+    ]
+}
