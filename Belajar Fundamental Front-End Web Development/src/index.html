@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>On This Day</title>
+</head>
+<body>
+<header>
+    <app-bar></app-bar>
+</header>
+<main>
+    <div class="slider">
+        <input name="input-slider" id='input-slide-0' type="radio" class='input-slide input-slide-num' >
+        <input name="input-slider" id='input-slide-1' type="radio" class='input-slide input-slide-num' >
+        <input name="input-slider" id='input-slide-2' type="radio" class='input-slide input-slide-num' >
+        <input name="input-slider" id='input-slide-3' type="radio" class='input-slide input-slide-num' >
+        <input name="input-slider" id='input-slide-autoplay' type="radio" class='input-slide' checked>
+        <ul>
+            <li class='slide-0'></li>
+            <li class='slide-1'></li>
+            <li class='slide-2'></li> 
+            <li class='slide-3'></li>        
+        </ul>
+        <div class='slide-description'>
+            <label class='slide-0'>
+                <h1 class="text-slide">Know what happened today!</h1>
+            </label>
+            <label class='slide-1'>
+                <h1 class="text-slide">Imagine the day from the past!</h1>
+            </label>
+            <label class='slide-2'>
+                <h1 class="text-slide">Create your own history in future!</h1>
+            </label>
+            <label class='slide-3'>
+                <h1 class="text-slide">And change the world of you!</h1>
+            </label>
+        </div>
+        <div class='slider-arrow-prev'>
+            <label class='slide-0' for='input-slide-0'></label>
+            <label class='slide-1' for='input-slide-1'></label>
+            <label class='slide-2' for='input-slide-2'></label>
+            <label class='slide-3' for='input-slide-3'></label>
+        </div>
+        <div class='slider-arrow-next'>
+            <label class='slide-0' for='input-slide-0'></label>
+            <label class='slide-1' for='input-slide-1'></label>
+            <label class='slide-2' for='input-slide-2'></label>
+            <label class='slide-3' for='input-slide-3'></label>
+        </div>        
+        <div class='slider-dot'>
+            <label class='slide-0' for='input-slide-0'></label>
+            <label class='slide-1' for='input-slide-1'></label>
+            <label class='slide-2' for='input-slide-2'></label>
+            <label class='slide-3' for='input-slide-3'></label>
+        </div>        
+    </div>
+    <search-bar></search-bar>
+    <div class="container">
+        <timeline-list data="births"></timeline-list>
+        <timeline-list data="events"></timeline-list>
+        <timeline-list data="deaths"></timeline-list>
+    </div>
+</main>
+<footer>
+    <foot-copyright name="Muhammad Arif Faizin" link="https://github.com/MuhammadArifFaizin"></foot-copyright>
+</footer>
+</body>
+</html>

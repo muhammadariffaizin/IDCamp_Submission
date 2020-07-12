@@ -1,0 +1,37 @@
+{
+  "name": "on-this-day",
+  "version": "1.0.0",
+  "description": "On This Day shows the births, deaths, and events on that day",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start-dev": "webpack-dev-server --config webpack.dev.js --open",
+    "build": "webpack --config webpack.prod.js"
+  },
+  "author": "Muhammad Arif Faizin",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.10.2",
+    "@babel/preset-env": "^7.10.2",
+    "babel-loader": "^8.1.0",
+    "css-loader": "^3.5.3",
+    "html-loader": "^1.1.0",
+    "html-webpack-plugin": "^4.3.0",
+    "style-loader": "^1.2.1",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.11.0",
+    "webpack-merge": "^4.2.2"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.13.0",
+    "bootstrap": "^4.5.0",
+    "file-loader": "^6.0.0",
+    "fontawesome": "^5.6.3",
+    "http-server": "^0.12.3",
+    "jquery": "^3.5.1",
+    "node-sass": "^4.14.1",
+    "regenerator-runtime": "^0.13.5",
+    "sass-loader": "^8.0.2"
+  }
+}

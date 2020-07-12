@@ -1,0 +1,224 @@
+input{
+    display: none;
+}
+ 
+.slider{
+    height: 25vw;
+    overflow: hidden;
+}
+ 
+.slider > ul {
+    height: 100%;
+    z-index: 100;
+}
+.slider > ul > li{
+    height: calc(25vw + 24px);
+    width: 100%;
+    position: absolute;
+ 
+    opacity: 0;
+    z-index: 1;	
+      transition: all 2000ms ease;
+}
+.slider > #input-slide-0:checked ~ ul > li.slide-0,
+.slider > #input-slide-1:checked ~ ul > li.slide-1,
+.slider > #input-slide-2:checked ~ ul > li.slide-2,
+.slider > #input-slide-3:checked ~ ul > li.slide-3{
+    opacity: 1;
+    z-index: 2;
+}
+.slider > ul > li.slide-0{
+    background-image: url("https://cache.desktopnexus.com/cropped-wallpapers/2183/2183051-1440x900-[DesktopNexus.com].jpg?st=e6dLlB4Bx-oRken7HaOlDA&e=1592128187");
+    background-size: cover;
+}
+.slider > ul > li.slide-1{
+    background-image: url("https://wallpaperaccess.com/full/49608.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.slider > ul > li.slide-2{
+    background-image: url("https://ewscripps.brightspotcdn.com/dims4/default/587a960/2147483647/strip/true/crop/1280x720+0+0/resize/1280x720!/quality/90/?url=http%3A%2F%2Fewscripps-brightspot.s3.amazonaws.com%2F66%2Ffb%2Fbb8fd7b643ad8e0bf491d181429d%2Fmichael-ryno-sunflower-3.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+.slider > ul > li.slide-3{
+    background-image: url("https://cdn1.collective-evolution.com/assets/uploads/2015/06/change.jpg");
+    background-size: cover;
+    background-position: center;
+}
+ 
+.slider > .slider-arrow-prev,
+.slider > .slider-arrow-next {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: 300;
+}
+.slider > .slider-arrow-prev > label,
+.slider > .slider-arrow-next > label {
+    position: absolute;
+    width: 5vw;
+    height: 5vw;
+    margin-top: -2.5vw;
+    opacity: 0;
+    background-size: 100% auto;
+    background-position: center;
+ 
+    z-index: -1;
+      transition: all 0.5s ease;
+}
+.slider > #input-slide-0:checked ~ .slider-arrow-prev > label.slide-3,
+.slider > #input-slide-0:checked ~ .slider-arrow-next > label.slide-1, 
+.slider > #input-slide-1:checked ~ .slider-arrow-prev > label.slide-0,
+.slider > #input-slide-1:checked ~ .slider-arrow-next > label.slide-2, 
+.slider > #input-slide-2:checked ~ .slider-arrow-prev > label.slide-1,
+.slider > #input-slide-2:checked ~ .slider-arrow-next > label.slide-3, 
+.slider > #input-slide-3:checked ~ .slider-arrow-prev > label.slide-2,
+.slider > #input-slide-3:checked ~ .slider-arrow-next > label.slide-0 {
+    z-index: 1;
+}
+ 
+.slider > .slider-dot {
+    position: relative;
+    margin-top: -4vw;
+    text-align: center;
+    z-index: 300;
+    font-size: 0;
+}
+.slider > .slider-dot > label {
+    position: relative;
+    display: inline-block;
+    margin: 1vw 0.5vw;
+    width: 1vw;
+    height: 1vw;
+    border-radius: 50%;
+ 
+    background-color: #FFF;
+}
+.slider > #input-slide-0:checked ~ .slider-dot > label.slide-0,
+.slider > #input-slide-1:checked ~ .slider-dot > label.slide-1,
+.slider > #input-slide-2:checked ~ .slider-dot > label.slide-2,
+.slider > #input-slide-3:checked ~ .slider-dot > label.slide-3 {
+    background-color: #232323;
+}
+.slider > .slider-dot > label:hover{
+    background-color: limegreen !important;
+}
+.slider > .slide-description{
+    position: absolute;
+    width: 50%;
+    left: 25%;
+    top: calc(60px + 24pt + 16vw);
+    z-index: 200;
+}
+.slider > .slide-description > label{
+    font-family: Lato, Arial;
+    font-size: 1.4vw;
+    position: absolute;
+    width: 50vw;
+    cursor: default;
+    color: #efefef;
+ 
+    z-index: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.75s ease;	
+}
+.slider > #input-slide-0:checked ~ .slide-description > .slide-0,
+.slider > #input-slide-1:checked ~ .slide-description > .slide-1,
+.slider > #input-slide-2:checked ~ .slide-description > .slide-2,
+.slider > #input-slide-3:checked ~ .slide-description > .slide-3{
+    z-index: 2;
+    opacity: 1;
+    visibility: visible;	
+}
+.slider > .slide-description > label > .text-slide{
+    margin: 0 auto;
+    line-height: 6vh;
+    text-align: center;
+}
+ 
+ 
+ 
+@keyframes slide{
+    0%, 100% { opacity: 0; }
+    6%, 25% { opacity: 1; z-index: 2; }
+    30%, 50% { opacity: 0; z-index: 2; }
+}
+.slider > #input-slide-autoplay:checked ~ ul > li.slide-0{
+    animation: slide 32000ms infinite -2000ms linear;
+}
+.slider > #input-slide-autoplay:checked ~ ul > li.slide-1{
+    animation: slide 32000ms infinite 6000ms linear;	
+}
+.slider > #input-slide-autoplay:checked ~ ul > li.slide-2{
+    animation: slide 32000ms infinite 14000ms linear;	
+}
+.slider > #input-slide-autoplay:checked ~ ul > li.slide-3{
+    animation: slide 32000ms infinite 22000ms linear;	
+}
+.slider > #input-slide-autoplay:checked ~ ul > li{
+    transition: none;	
+}
+ 
+ 
+@keyframes arrow {
+    0%, 24% { z-index: 1; }
+    25%, 100% { z-index: -1; }
+}
+.slider > #input-slide-autoplay:checked ~ .slider-arrow-prev > label.slide-3,
+.slider > #input-slide-autoplay:checked ~ .slider-arrow-next > label.slide-1{
+    animation: arrow 32000ms infinite -2000ms;	
+}
+.slider > #input-slide-autoplay:checked ~ .slider-arrow-prev > label.slide-0,
+.slider > #input-slide-autoplay:checked ~ .slider-arrow-next > label.slide-2{
+    animation: arrow 32000ms infinite 6000ms;	
+}
+.slider > #input-slide-autoplay:checked ~ .slider-arrow-prev > label.slide-1,
+.slider > #input-slide-autoplay:checked ~ .slider-arrow-next > label.slide-3{
+    animation: arrow 32000ms infinite 14000ms;	
+}
+.slider > #input-slide-autoplay:checked ~ .slider-arrow-prev > label.slide-2,
+.slider > #input-slide-autoplay:checked ~ .slider-arrow-next > label.slide-0{
+    animation: arrow 32000ms infinite 22000ms;	
+}
+ 
+ 
+@keyframes dot {
+    0%, 24%	{ background-color: #333; }
+    25%, 100% { background: #FFF; }
+}
+.slider > #input-slide-autoplay:checked ~ .slider-dot > label.slide-0{
+    animation: dot 32000ms infinite -2000ms;	
+}
+.slider > #input-slide-autoplay:checked ~ .slider-dot > label.slide-1{
+    animation: dot 32000ms infinite 6000ms;	
+}
+.slider > #input-slide-autoplay:checked ~ .slider-dot > label.slide-2{
+    animation: dot 32000ms infinite 14000ms;	
+}
+.slider > #input-slide-autoplay:checked ~ .slider-dot > label.slide-3{
+    animation: dot 32000ms infinite 22000ms;	
+}
+ 
+ 
+@keyframes description{
+    0%, 5% { opacity: 0; z-index: 2; visibility: visible; }
+    6%, 24% { opacity: 1; z-index: 2; visibility: visible; }
+    25%, 100% { opacity: 0; z-index: 0; visibility: hidden; }
+}
+.slider > #input-slide-autoplay:checked ~ .slide-description > .slide-0{
+    animation: description 32000ms infinite -2000ms ease;
+}
+.slider > #input-slide-autoplay:checked ~ .slide-description > .slide-1{
+    animation: description 32000ms infinite 6000ms ease;
+}
+.slider > #input-slide-autoplay:checked ~ .slide-description > .slide-2{
+    animation: description 32000ms infinite 14000ms ease;
+}
+.slider > #input-slide-autoplay:checked ~ .slide-description > .slide-3{
+    animation: description 32000ms infinite 22000ms ease;
+}
+.slider > #input-slide-autoplay:checked ~ .slide-description > label{
+      transition: none;  	
+}
